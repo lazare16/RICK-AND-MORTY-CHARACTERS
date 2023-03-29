@@ -43,6 +43,7 @@ function App() {
 
       // Set data state to newData array
       setData(newData);
+      console.log(newData);
     };
 
     fetchData();

@@ -35,6 +35,33 @@
 
  }
 
+
+
+ .Alive{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(82, 245, 82);
+ }
+
+ .Dead{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(240, 64, 64);
+ }
+
+ .Uknown{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(240, 175, 64);
+ }
+
+
  @media only screen and (max-width: 450px) {
   .card:hover {
     transform: scale(1);

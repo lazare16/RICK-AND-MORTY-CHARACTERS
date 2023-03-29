@@ -9,7 +9,7 @@ const Card = ({id, name, status, gender, location, origin, species}) =>{
         </div>
         <div className='info'>
           <h1>{name}</h1>
-          <p><span style={{fontWeight: 'bold', color: 'rgb(158, 158, 158)'}}>{status}</span> - {species}</p>
+          <p>{status == 'Alive'? <span className='Alive'></span> : status == 'Dead' ? <span className='Dead'></span> : <span className='Uknown'></span>  } <span style={{fontWeight: 'bold', color: 'rgb(158, 158, 158)'}}>{status}</span> - {species}</p>
           <p><span style={{fontWeight: 'bold', color: 'rgb(158, 158, 158)'}}>Last known location:</span> {location.name}</p>
           <p><span style={{fontWeight: 'bold', color: 'rgb(158, 158, 158)'}}>Origin:</span> {origin.name}</p>
         </div>
