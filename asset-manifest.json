@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/RICK-AND-MORTY-CHARACTERS/static/css/main.3788004c.css",
+    "main.js": "/RICK-AND-MORTY-CHARACTERS/static/js/main.29bf3e0d.js",
+    "index.html": "/RICK-AND-MORTY-CHARACTERS/index.html",
+    "main.3788004c.css.map": "/RICK-AND-MORTY-CHARACTERS/static/css/main.3788004c.css.map",
+    "main.29bf3e0d.js.map": "/RICK-AND-MORTY-CHARACTERS/static/js/main.29bf3e0d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3788004c.css",
+    "static/js/main.29bf3e0d.js"
+  ]
+}
