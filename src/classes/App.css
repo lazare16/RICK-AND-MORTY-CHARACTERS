@@ -1,0 +1,36 @@
+body{
+  background-color: rgb(39, 43, 51);;
+}
+
+header{
+  background-color: rgb(28, 31, 36);;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 15px 25px 15px;
+  box-shadow: 0 1px 5px rgb(0, 0, 0);
+}
+
+header>input{
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+  font-family: sans-serif;
+}
+
+header> a{
+  text-decoration: none;
+  color: white;
+}
+
+main{
+  min-height: 90vh;
+}
+
+.loader{
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+}
