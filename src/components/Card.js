@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import '../classes/card.css';
-
 
 const Card = ({ id, name, status, gender, location, origin, species, episode }) => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -23,6 +22,14 @@ const Card = ({ id, name, status, gender, location, origin, species, episode }) 
     }
     return `https://www.adjaranet.com/movies/1000747/Rick-and-Morty?lang=ENG&quality=HD&season=${season}&episode=${episodeNumber}`;
   }
+
+  const episodeNumbers = episode.map((episodeLink) => {
+    if (!episodeLink) {
+      return null;
+    }
+    const episodeNumber = parseInt(episodeLink.split('/').pop());
+    return episodeNumber;
+  });
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
@@ -51,8 +58,8 @@ const Card = ({ id, name, status, gender, location, origin, species, episode }) 
             <form onSubmit={handleSubmit} className="form">
               <select id="episodes" name="episodes" value={selectedOption} onChange={handleOptionChange} className="select">
                 <option value="" className="options">Episode</option>
-                {episodeLinks.map((link, index) => (
-                  <option key={index} value={index} className="options">{`Episode ${index+1}`}</option>
+                {episodeNumbers.map((episodeNumber, index) => (
+                  <option key={index} value={index} className="options">{`Episode ${episodeNumber}`}</option>
                 ))}
               </select>
               <input type="submit" value="submit"  className='submit'/>
@@ -65,5 +72,7 @@ const Card = ({ id, name, status, gender, location, origin, species, episode }) 
 }
 
 export default Card;
+
+
 
 
