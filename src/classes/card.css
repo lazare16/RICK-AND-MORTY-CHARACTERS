@@ -68,11 +68,12 @@
 }
 
 .select{
-  margin-left: 2px;
+  margin-left: 10px;
   background-color: rgb(32, 32, 32);
   color: rgb(234, 234, 234);
   border: none;
   border-radius: 5px;
+  width: 80px;
 }
 
 .form{
@@ -88,11 +89,10 @@
   border: none;
   border-radius: 5px;
   padding: 3px;
+
 }
 
-.options{
-  /* background-color: rgb(170, 170, 170); */
-}
+
 
 
  @media only screen and (max-width: 450px) {
