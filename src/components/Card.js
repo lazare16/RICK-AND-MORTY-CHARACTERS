@@ -72,7 +72,7 @@ const Card = ({ id, name, status, gender, location, origin, species, episode }) 
             <p style={{fontWeight: 'bold', color: 'rgb(158, 158, 158)'}}>Appears:</p>
             <form onSubmit={handleSubmit} className="form">
               <select id="episodes" name="episodes" value={selectedOption} onChange={handleOptionChange} className="select">
-                <option value="" className="options">Episode</option>
+                <option value="" className="options">Select</option>
                 {episodeNumbers.map((episodeNumber, index) => (
                   <option key={index} value={index} className="options">{`Episode ${episodeNumber}`}</option>
                 ))}
