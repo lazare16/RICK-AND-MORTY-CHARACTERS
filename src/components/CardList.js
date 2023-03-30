@@ -17,6 +17,7 @@ const CardList = ({data}) =>{
               location={data[i].location}
               origin={data[i].origin}
               species={data[i].species}
+              episode={data[i].episode}
               />
           );
         })

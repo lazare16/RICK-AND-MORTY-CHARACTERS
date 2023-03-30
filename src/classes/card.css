@@ -1,7 +1,7 @@
 .card{
   background-color: rgb(60, 62, 68);
-  width: 300px;
-  height: 500px;
+  width: 305px;
+  min-height: 500px;
   border-radius: 10px;
   transition: transform 0.5s ease-in-out;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.276);
@@ -60,6 +60,39 @@
   border-radius: 50%;
   background-color: rgb(240, 175, 64);
  }
+
+.episodes{
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+}
+
+.select{
+  margin-left: 2px;
+  background-color: rgb(32, 32, 32);
+  color: rgb(234, 234, 234);
+  border: none;
+  border-radius: 5px;
+}
+
+.form{
+  /* background-color: red; */
+  margin-left: 3px;
+}
+
+.submit{
+  background-color: rgb(32, 32, 32);
+  color: rgb(234, 234, 234);
+  margin-left: 10px;
+  font-family: sans-serif;
+  border: none;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.options{
+  /* background-color: rgb(170, 170, 170); */
+}
 
 
  @media only screen and (max-width: 450px) {
