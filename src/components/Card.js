@@ -20,8 +20,23 @@ const Card = ({ id, name, status, gender, location, origin, species, episode }) 
     } else if (episodeNumber > 41) {
       season = 5;
     }
-    return `https://www.adjaranet.com/movies/1000747/Rick-and-Morty?lang=ENG&quality=HD&season=${season}&episode=${episodeNumber}`;
+  
+    // extract the episode number based on the season number and generate the new link
+    let newEpisodeNumber = episodeNumber;
+    if (season === 2) {
+      newEpisodeNumber = episodeNumber - 11;
+    } else if (season === 3) {
+      newEpisodeNumber = episodeNumber - 21;
+    } else if (season === 4) {
+      newEpisodeNumber = episodeNumber - 31;
+    } else if (season === 5) {
+      newEpisodeNumber = episodeNumber - 41;
+    }
+    
+    return `https://www.adjaranet.com/movies/1000747/Rick-and-Morty?lang=ENG&quality=HD&season=${season}&episode=${newEpisodeNumber}`;
   }
+
+  
 
   const episodeNumbers = episode.map((episodeLink) => {
     if (!episodeLink) {
