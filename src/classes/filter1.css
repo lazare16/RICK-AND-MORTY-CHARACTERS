@@ -5,12 +5,13 @@ form>select{
    font-family: sans-serif;
    border: none;
    border-radius: 3px;
-   padding: 5px;
+   padding: 1px;
    background-color: rgb(215, 215, 215);
 
 }
 
 select{
    margin-right: 10px;
+   color: black;
 }
 

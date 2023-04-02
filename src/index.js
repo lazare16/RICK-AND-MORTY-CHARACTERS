@@ -10,9 +10,7 @@ import favicon from './IMAGES/icons8-morty-smith-32.png';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <head>
-      <link rel="icon" type="image/png" href={favicon} />
-    </head>
+    <link rel="icon" type="image/png" href={favicon} />
     <App />
   </React.StrictMode>
 );

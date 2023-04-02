@@ -22,15 +22,16 @@ header>input{
 input, select, textarea {
   font-size: 16px; /* or whatever your base font size is */
   max-height: 100%; /* or a specific value, depending on your layout */
-  max-width: 100%; /* or a specific value, depending on your layout */
-  -ms-touch-action: none; /* disable touch zoom on IE and Edge */
-  user-select: none; /* disable text selection */
+  max-width: 100%; 
+  -ms-touch-action: none; 
+  user-select: none; 
 }
 
 
 .headerContainer{
   /* background-color: yellow; */
   display: flex;
+  align-items: center;
 }
 
 .headerContainer> a{

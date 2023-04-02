@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./classes/App.css";
-import favicon from './IMAGES/icons8-morty-smith-32.png';
 import Search from "./components/Search";
 import CardList from "./components/CardList";
 import Button from "./components/Button"
@@ -119,7 +118,6 @@ function App() {
     <ReactLoading type={'spin'} color={'#333'} height={50} width={50} className="loader"/>
   ) : (
     <>
-      <link rel="icon" type="image/png" href={favicon} />
       <header>
         <Search searchChange={onSearch}/>
         <div className="headerContainer">
