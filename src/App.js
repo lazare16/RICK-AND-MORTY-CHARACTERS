@@ -95,7 +95,7 @@ function App() {
         <Search searchChange={onSearch}/>
         <div className="headerContainer">
           <Filter selectedSpecies={selectedSpecies} onSpeciesFilterChange={onSpeciesFilterChange}/>
-          <a href="https://github.com/lazare16"><FontAwesomeIcon icon={["fab", "github-alt"]}  className="icon"/></a>
+          <a href="https://github.com/lazare16"><FontAwesomeIcon icon={["fab", "github-alt"]} className="github"/></a>
         </div>
       </header>
       <main>
@@ -122,7 +122,7 @@ function App() {
         <Search searchChange={onSearch}/>
         <div className="headerContainer">
           <Filter selectedSpecies={selectedSpecies} onSpeciesFilterChange={onSpeciesFilterChange}/>
-          <a href="https://github.com/lazare16"><FontAwesomeIcon icon={["fab", "github-alt"]}  className="icon"/></a>
+          <a href="https://github.com/lazare16"><FontAwesomeIcon icon={["fab", "github-alt"]}  className="github"/></a>
         </div>
       </header>
       <main>

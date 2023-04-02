@@ -34,9 +34,15 @@ input, select, textarea {
   align-items: center;
 }
 
-.headerContainer> a{
+.headerContainer>a{
   text-decoration: none;
   color: white;
+  margin-left: 10px;
+}
+
+.headerContainer>a>.github{
+  font-size: 30px;
+  
 }
 
 main{
