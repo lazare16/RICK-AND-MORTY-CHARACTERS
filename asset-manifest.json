@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/RICK-AND-MORTY-CHARACTERS/static/css/main.8c01f191.css",
-    "main.js": "/RICK-AND-MORTY-CHARACTERS/static/js/main.43eff0db.js",
+    "main.css": "/RICK-AND-MORTY-CHARACTERS/static/css/main.ea57837c.css",
+    "main.js": "/RICK-AND-MORTY-CHARACTERS/static/js/main.e97aad5c.js",
     "index.html": "/RICK-AND-MORTY-CHARACTERS/index.html",
-    "main.8c01f191.css.map": "/RICK-AND-MORTY-CHARACTERS/static/css/main.8c01f191.css.map",
-    "main.43eff0db.js.map": "/RICK-AND-MORTY-CHARACTERS/static/js/main.43eff0db.js.map"
+    "main.ea57837c.css.map": "/RICK-AND-MORTY-CHARACTERS/static/css/main.ea57837c.css.map",
+    "main.e97aad5c.js.map": "/RICK-AND-MORTY-CHARACTERS/static/js/main.e97aad5c.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c01f191.css",
-    "static/js/main.43eff0db.js"
+    "static/css/main.ea57837c.css",
+    "static/js/main.e97aad5c.js"
   ]
 }
