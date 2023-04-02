@@ -62,10 +62,11 @@
  }
 
 .episodes{
-  /* background-color: green; */
   display: flex;
   align-items: center;
 }
+
+
 
 .select{
   margin-left: 10px;

@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import '../classes/card.css';
 
-const Card = ({ id, name, status, gender, location, origin, species, episode }) => {
+
+
+
+
+
+const Card = ({ id, name, status,location, origin, species, episode }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const episodeLinks = episode.map(getEpisodeLink);
 
@@ -87,6 +92,7 @@ const Card = ({ id, name, status, gender, location, origin, species, episode }) 
 }
 
 export default Card;
+
 
 
 

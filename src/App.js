@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./classes/App.css";
+import favicon from './IMAGES/icons8-morty-smith-32.png';
 import Search from "./components/Search";
 import CardList from "./components/CardList";
 import Button from "./components/Button"
@@ -9,6 +10,8 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 import ReactLoading from 'react-loading';
+import Filter from './components/Filter';
+import rick from './IMAGES/icons8-rick-sanchez-100.png';
 
 library.add(fab, faGithubAlt);
 
@@ -17,6 +20,8 @@ library.add(fab, faGithubAlt);
 function App() {
   const [searchValue, setSearchValue] = useState("");
   const [data, setData] = useState([]);
+  const [selectedSpecies, setSelectedSpecies] = React.useState('All');
+
 
   const onSearch = (e) => {
     setSearchValue(e.target.value);
@@ -47,18 +52,75 @@ function App() {
     };
 
     fetchData();
+
+    document.title = "Rick and Morty App";
   }, []);
 
-  const filteredData = data.filter((character) =>
-    character.name.toLowerCase().includes(searchValue.toLowerCase())
-  );
+  const onSpeciesFilterChange = (event) => {
+    setSelectedSpecies(event.target.value);
+  };
+
+  const filteredData = data.filter((character) => {
+    switch (selectedSpecies) {
+      case 'All':
+        return character.name.toLowerCase().includes(searchValue.toLowerCase());
+      case 'Alien':
+        return (
+          character.name.toLowerCase().includes(searchValue.toLowerCase()) &&
+          character.species.toLowerCase() === 'alien'
+        );
+      case 'Human':
+        return (
+          character.name.toLowerCase().includes(searchValue.toLowerCase()) &&
+          character.species.toLowerCase() === 'human'
+        );
+      case 'Humanoid':
+        return (
+          character.name.toLowerCase().includes(searchValue.toLowerCase()) &&
+          character.species.toLowerCase() === 'humanoid'
+        );
+      default:
+        return (
+          character.name.toLowerCase().includes(searchValue.toLowerCase()) &&
+          character.species.toLowerCase() === 'unknown'
+        );
+    }
+  });
+
+
+
+  if (filteredData.length === 0) {
+    return(
+      <>
+      <header>
+        <Search searchChange={onSearch} />
+        <Filter selectedSpecies={selectedSpecies} onSpeciesFilterChange={onSpeciesFilterChange}/>
+        <a href="https://github.com/lazare16"><FontAwesomeIcon icon={["fab", "github-alt"]}  className="icon"/></a>
+      </header>
+      <main>
+        <div className="noResultWrapper">
+          <img src={rick} alt="rick"  id="rick"/>
+          <h1 className="NoResult">Result not found</h1>
+        </div>
+      </main>
+    </>
+    );
+  } else {
+    console.log('success');
+  }
+
+
+  
+
 
   return !data.length ? (
     <ReactLoading type={'spin'} color={'#333'} height={50} width={50} className="loader"/>
   ) : (
     <>
+      <link rel="icon" type="image/png" href={favicon} />
       <header>
         <Search searchChange={onSearch} />
+        <Filter selectedSpecies={selectedSpecies} onSpeciesFilterChange={onSpeciesFilterChange}/>
         <a href="https://github.com/lazare16"><FontAwesomeIcon icon={["fab", "github-alt"]}  className="icon"/></a>
       </header>
       <main>

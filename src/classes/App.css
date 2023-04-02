@@ -26,6 +26,7 @@ header> a{
 
 main{
   min-height: 90vh;
+  position: relative;
 }
 
 .loader{
@@ -33,4 +34,30 @@ main{
   left: 50%;
   top:50%;
   transform: translate(-50%, -50%);
+}
+
+.noResultWrapper{
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#rick{
+  /* background-color: yellow; */
+  padding: 0 5% 0 5%;
+  width: 150px;
+  height: 150px;
+}
+
+
+.NoResult{
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
 }
