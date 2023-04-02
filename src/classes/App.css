@@ -8,7 +8,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 15px 25px 15px;
+  padding: 0px 15px 0px 15px;
   box-shadow: 0 1px 5px rgb(0, 0, 0);
 }
 
@@ -19,7 +19,14 @@ header>input{
   font-family: sans-serif;
 }
 
-header> a{
+
+
+.headerContainer{
+  /* background-color: yellow; */
+  display: flex;
+}
+
+.headerContainer> a{
   text-decoration: none;
   color: white;
 }

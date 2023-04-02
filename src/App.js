@@ -93,9 +93,11 @@ function App() {
     return(
       <>
       <header>
-        <Search searchChange={onSearch} />
-        <Filter selectedSpecies={selectedSpecies} onSpeciesFilterChange={onSpeciesFilterChange}/>
-        <a href="https://github.com/lazare16"><FontAwesomeIcon icon={["fab", "github-alt"]}  className="icon"/></a>
+        <Search searchChange={onSearch}/>
+        <div className="headerContainer">
+          <Filter selectedSpecies={selectedSpecies} onSpeciesFilterChange={onSpeciesFilterChange}/>
+          <a href="https://github.com/lazare16"><FontAwesomeIcon icon={["fab", "github-alt"]}  className="icon"/></a>
+        </div>
       </header>
       <main>
         <div className="noResultWrapper">
@@ -119,9 +121,11 @@ function App() {
     <>
       <link rel="icon" type="image/png" href={favicon} />
       <header>
-        <Search searchChange={onSearch} />
-        <Filter selectedSpecies={selectedSpecies} onSpeciesFilterChange={onSpeciesFilterChange}/>
-        <a href="https://github.com/lazare16"><FontAwesomeIcon icon={["fab", "github-alt"]}  className="icon"/></a>
+        <Search searchChange={onSearch}/>
+        <div className="headerContainer">
+          <Filter selectedSpecies={selectedSpecies} onSpeciesFilterChange={onSpeciesFilterChange}/>
+          <a href="https://github.com/lazare16"><FontAwesomeIcon icon={["fab", "github-alt"]}  className="icon"/></a>
+        </div>
       </header>
       <main>
         {searchValue && <CardList data={filteredData} />}

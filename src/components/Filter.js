@@ -1,8 +1,5 @@
 import React from 'react'
 import '../classes/filter1.css';
-
-
-
 const Filter = ({selectedSpecies, onSpeciesFilterChange}) =>{
     return(
         <form>
