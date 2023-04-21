@@ -88,7 +88,7 @@ function App() {
 
 
 
-  if (filteredData.length === 0 &&  searchValue !== 0) {
+  if (filteredData.length === 0 &&  searchValue != 0) {
     return(
       <>
       <header>
