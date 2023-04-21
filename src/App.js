@@ -88,7 +88,7 @@ function App() {
 
 
 
-  if (filteredData.length === 0 &&  searchValue != 0) {
+  if (filteredData.length === 0 &&  searchValue !== 0) {
     return(
       <>
       <header>
@@ -107,30 +107,33 @@ function App() {
     </>
     );
   } else {
-    console.log('success');
+    return !data.length ? (
+      <ReactLoading type={'spin'} color={'#333'} height={50} width={50} className="loader"/>
+    ) : (
+      <>
+        <header>
+          <Search searchChange={onSearch}/>
+          <div className="headerContainer">
+            <Filter selectedSpecies={selectedSpecies} onSpeciesFilterChange={onSpeciesFilterChange}/>
+            <a href="https://github.com/lazare16"><FontAwesomeIcon icon={["fab", "github-alt"]}  className="github"/></a>
+          </div>
+        </header>
+        <main>
+            {searchValue ? (
+            <CardList data={filteredData} />
+          ) : (
+            <CardList data={data} />
+          )}
+          <Button />
+        </main>
+      </>
+    );
+  }
   }
 
 
   
 
 
-  return !data.length ? (
-    <ReactLoading type={'spin'} color={'#333'} height={50} width={50} className="loader"/>
-  ) : (
-    <>
-      <header>
-        <Search searchChange={onSearch}/>
-        <div className="headerContainer">
-          <Filter selectedSpecies={selectedSpecies} onSpeciesFilterChange={onSpeciesFilterChange}/>
-          <a href="https://github.com/lazare16"><FontAwesomeIcon icon={["fab", "github-alt"]}  className="github"/></a>
-        </div>
-      </header>
-      <main>
-        {searchValue && <CardList data={filteredData} />}
-        <Button />
-      </main>
-    </>
-  );
-}
 
 export default App;
